@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+ 
+  <title>Mi aplicacion</title>
+
+  <!--grupo CSS-->
+  <link rel="stylesheet" href="css/colores.min.css" />
+  <link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css" />
+  <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" /> 
+        
+        
+
+
+  <!--grupo JavaScript-->
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/jquery.mobile-1.4.5.min.js"></script>
+  <script src="js/acciones.js" type="text/javascript"></script>
+   <script src="phonegap.js" type="text/javascript"></script>
+ </head>
+
+ <body>
+ 
+ <!-- Inicio -->
+ <div data-role="page" id="inicio" >
+   <div data-role="header">
+    <h1 align="center">Calcula los dias para tu cumple!!</h1>
+  </div>
+
+  <div data-role="main" class="ui-content" >
+   <div align="center" style="clear:both">
+   <p align="center" style="clear:both">Esta aplicacion te dira cuantos dias faltan para tu cumple</p>
+   <img src="images/tres.jpg" style="height:
+   450px;width:350px;">
+   </div>
+  </div>
+  <br>
+  <br>
+  <div data-role="footer">
+    <div style="float:left; width:20%;">
+     <img src="images/seis.jpg" style="height:150px;width:150px;">
+  </div>
+    </div>
+    <div style="float:left; width:60%;">
+     <div align="center">
+     <a href="#datos" id="btncomenzar" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow-icon ui-btn-corner-all ui-btn-inline">Comenzar</a>
+     </div>
+    </div>
+    <div style="float:left; width:20%;">
+     <img src="images/cinco.jpg" style="height:150px;width:150px; float:right;">
+  </div>
+    </div>
+  </div>
+ </div>  
+ <!-- Inicio -->
+ 
+ <!-- Datos -->
+ <div data-role="page" id="datos" >   
+  <div data-role="header">
+    <h1>¿Como te llamas?</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <div style="float:left; width:50%;">
+     <h2 style="float:right">Nombre:</h2>
+    </div>
+    <div style="float:left; width:50%;">
+     <input type="text" id="txtnombre" placeholder="Nombre" style="float:left; color:#000">
+    </div>
+    <div style="clear:both;" align="center">
+     <img src="images/ocho.gif" style="height:400px;width:640px;">
+    </div>
+  </div>
+    <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div data-role="footer">
+    <div style="float:left; width:50%;">
+     <div align="center">
+      <a href="#inicio" id="btninicio" class="ui-btn ui-icon-home ui-btn-icon-left ui-shadow-icon ui-btn-corner-all ui-btn-inline">Inicio</a>
+     </div>
+    </div>
+    <div style="float:left; width:50%;">
+     <div align="center">
+      <a href="#fecha" id="btnfecha" class="ui-btn ui-icon-arrow-r ui-btn-icon-right ui-shadow-icon ui-btn-corner-all ui-btn-inline">Continuar</a>
+     </div>
+    </div>
+  </div>
+ </div>  
+ <!-- Datos -->
+ 
+ <!-- Fecha -->
+ <div data-role="page" id="fecha" >   
+  <div data-role="header">
+        <h1>¿En que fecha naciste?</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <div align="center">
+     <div style="width:50%">
+      <div style="float:left; width:30%;">
+            <input type="number" id="txtdia" placeholder="DD">
+      </div>
+      <div style="float:left; width:30%;">
+            <input type="number" id="txtmes" placeholder="MM">
+      </div>
+      <div style="float:left; width:40%;">
+            <input type="number" id="txtanio" placeholder="AAAA">
+      </div>
+     </div>
+     <div style="clear:both">
+       <img src="images/cuatro.jpg" style="height:400px;width:640px;">
+     </div>
+    </div> 
+  </div>
+ <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div data-role="footer">
+    <div style="float:left; width:50%;">
+     <div align="center">
+      <a href="#datos" id="btndatos" class="ui-btn ui-icon-arrow-l ui-btn-icon-left ui-shadow-icon ui-btn-corner-all ui-btn-inline">Atras</a>
+     </div>
+    </div>
+    <div style="float:left; width:50%;">
+     <div align="center">
+      <a href="#resultado" id="btncalcular" class="ui-btn ui-icon-check ui-btn-icon-right ui-shadow-icon ui-btn-corner-all ui-btn-inline">Calcular</a>
+     </div>
+    </div>
+ </div> 
+ </div> 
+ <!-- Fecha -->
+ 
+ <!-- Resultado -->
+ <div data-role="page" id="resultado" >   
+  <div data-role="header">
+    <div id="divnombre" align="center">
+    </div>
+   </div> 
+  
+
+  <div data-role="main" class="ui-content">
+   <div align="center">
+    <div id="divdias" style="font-size:120px">
+    </div>
+    <div id="divfelicidades">
+    </div>
+    <div id="divanios">
+    </div>
+    <div id="divedad">
+    </div>
+    <div>
+      <img src="images/siete.jpg" id="felicidades" style="height:300px;width:500px; display:none">
+       <h1 style="text-align:center; color:#33F; size:25px; display:none" id="feli">Felicidades, pasatela super!!</h1>
+    </div>
+    </div>
+  </div>
+  <div data-role="footer">
+   <div align="center">
+    <a href="#inicio" id="btn_nuevo" class="ui-btn ui-icon-home ui-btn-icon-right ui-shadow-icon ui-btn-corner-all ui-btn-inline">Inicio</a>
+    <h1>@Damaris Aniceto Marin</h1>
+    <h1>@Anahi Ramos Martinez</h1> 
+  </div>
+ </div>
+ </div>  
+ <!-- Resultado -->
+
+ </body>
+</html> 
